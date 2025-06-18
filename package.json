@@ -3,18 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "author": "",
+  "author": "Gurwinder Singh",
   "license": "ISC",
-  "description": "",
+  "description": "A ThreadSnatch Image proxy server. This server fetches images from a given URL, processes them, and serves them with CORS headers.",
   "dependencies": {
     "axios": "^1.9.0",
     "cheerio": "^1.0.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
-    "nodemon": "^3.1.10",
     "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
