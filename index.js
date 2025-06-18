@@ -1,6 +1,5 @@
 const express = require("express");
 const axios = require("axios");
-const sharp = require("sharp");
 const cors = require("cors");
 const helmet = require("helmet");
 
@@ -33,12 +32,10 @@ const setCacheHeaders = (res, maxAge = 3600) => {
 
 // Main proxy endpoint
 app.get("/", (req, res) => {
-  res
-    .status(200)
-    .json({
-      success: true,
-      message: `"Image Proxy API is Online and Running! Use /proxy/image?url=<image_url> to fetch images."`,
-    });
+  res.status(200).json({
+    success: true,
+    message: `"Image Proxy API is Online and Running! Use /proxy/image?url=<image_url> to fetch images."`,
+  });
 });
 app.get("/proxy/image", async (req, res) => {
   try {
